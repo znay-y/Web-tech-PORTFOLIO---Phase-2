@@ -1,0 +1,95 @@
+fieldset {
+    background: linear-gradient(270deg, rgba(42, 102, 155, 1) 0%, rgba(139, 83, 237, 1) 100%);
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: black solid 2px;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40rem;
+
+}
+
+legend {
+    text-align: center;
+    background: linear-gradient(270deg, rgba(42, 102, 155, 1) 0%, rgba(139, 83, 237, 1) 100%);
+    border-radius: 1rem;
+    border: black solid 2px;
+    color: white;
+    padding: 0.5rem;
+}
+
+header{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.1rem;
+    margin: 0px;
+    backdrop-filter: invert(40%);
+}
+
+label {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+input {
+    width: 98%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+
+}
+
+p {
+    padding-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.textin {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2%;
+}
+
+#button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+
+h6 {
+    font-family: "Unica One", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+}
+
+li {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-self: center;
+}
+
+h1{
+     font-family: "Unica One", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+
+}
