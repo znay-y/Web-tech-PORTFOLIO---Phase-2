@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <title>Login Page</title>
 </head>
 
@@ -20,25 +21,37 @@
     <div id="main">
         <nav>
             <header>
-                <h1>Login Page</h1>
+                <h1>Register Page</h1>
             </header>
         </nav>
         <section>
-            <form method="POST" action="loginProcess.php">
+            <form method="POST" action="registerProcess.php" id="registrationForm">
                 <fieldset>
+                    <p>
+                        <label>First Name</label> <br>
+                        <input type="text" name="firstName" class="textin" placeholder="First Name" required>
+                    </p>
+                    <p>
+                        <label>Last Name</label> <br>
+                        <input type="text" name="lastName" class="textin" placeholder="Last Name" required>
+                    </p>
                     <p>
                         <label>E-mail:</label> <br>
                         <input type="email" name="email" class="textin" placeholder="E-mail" required>
                     </p>
                     <p>
                         <label>Password:</label> <br>
-                        <input type="password" name="password" class="textin" placeholder="Password" required>
+                        <input type="password" name="password" class="textin" placeholder="Password" id="passwordIn" required>
                     </p>
                     <p>
-                        <input type="submit" id="button" value="Login">
+                        <label>Confirm Password:</label> <br>
+                        <input type="password" name="confirmPassword" class="textin" placeholder="Confirm Password" id="confirm_passwordIn"  required>
                     </p>
                     <p>
-                        <a href="register.php">Don't have an account? Register here.</a>
+                        <input type="submit" id="button" value="Register">
+                    </p>
+                    <p>
+                        <a href="login.php">Already have an account? Login here.</a>
                     </p>
 
 
@@ -55,6 +68,8 @@
             </nav>
         </footer>
     </div>
+    <script src="js/registerCheck.js"></script>
+
 </body>
 
 </html>
