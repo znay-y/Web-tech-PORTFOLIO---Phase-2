@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <title>Main Menu</title>
+    <title>About Me</title>
 </head>
 
 <body>
@@ -22,7 +25,7 @@
         <nav>
             <ul class="navlist">
                 <li id="name">
-                    <a href="index.php">Zaine Irshad</a>
+                    <a href="viewBlog.php">About Me</a>
                 </li>
                 <li id="home">
                     <a href="index.php">Home</a>
@@ -36,34 +39,35 @@
                 <li id="skill">
                     <a href="skills.html">Skills</a>
                 </li>
+                <li>
+                    <a href="viewBlog.php">Blog Posts</a>
+                </li>
                 <li id="logout">
-                    <a href="login.php">Logout</a>
+                    <a href="login.php"><?php echo $_SESSION['fullname']; ?></a>
                 </li>
             </ul>
         </nav>
+        <section>
+            <article id="meIntro">
+                <aside>
+                    <p>
+                        My Name is Zaine Irshad, a full-time student and Queen Mary Univeristy Of London, currently pursuing
+                        a course in Computer Science. My Passion for computer science stems from my love for technology.
+                        This has led me to complete many tasks thoughout my life such as building multiple computers from
+                        scatch and self learning multiple programming languages such as Python and JavaScript.
+                    </p>
 
-         <section>
-        <article id="meIntro">
-            <aside>
-                <p>
-                    My Name is Zaine Irshad a full-time student and Queen Mary Univeristy Of London, currently pursuing
-                    a course in Computer Science. My Passion for computer science stems from my love for technology.
-                    This has led me to complete many tasks thoughout my life such as building multiple computers from
-                    scatch and self learning multiple programming languages such as Python and JavaScript.
-                </p>
-                <div><button> <a href="addEntry.php" id="entry">Add a new blog entry</a></button></div>
-        
-        
-            </aside>
-        
-            <figure>
-                <img src="img/me pic.jpg" alt="me fr">
-                <figcaption>Picture of me</figcaption>
-            </figure>
-        </article>
+
+                </aside>
+
+                <figure>
+                    <img src="img/me pic.jpg" alt="me fr">
+                    <figcaption>Picture of me</figcaption>
+                </figure>
+            </article>
 
         </section>
-      
+
         <footer>
 
             <nav>
