@@ -19,6 +19,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
     <title>Add Entry</title>
 </head>
@@ -44,7 +45,7 @@ session_start();
                     <a href="skills.html">Skills</a>
                 </li>
                 <li id="logout">
-                    <a href="login.php">Logout</a>
+                    <a href="login.php"><?php echo $_SESSION['fullname'];?></a>
                 </li>
             </ul>
         </nav>
