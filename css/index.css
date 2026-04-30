@@ -58,3 +58,10 @@ button {
 section {
     align-self: center;
 }
+
+@media (max-width: 768px) {
+    #meIntro {
+        display: flex;
+        flex-direction: column;
+    }
+}
