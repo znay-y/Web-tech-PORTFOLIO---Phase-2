@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/skills.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
@@ -14,7 +18,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
-    <title>Portfolio</title>
+    <title>My Skills</title>
 </head>
 
 <body>
@@ -23,41 +27,54 @@
         <nav>
             <ul class="navlist">
                 <li id="name">
-                    <a href="index.php">My Portfolio</a>
+                    <a href="skills.php">My Skills</a>
                 </li>
                 <li id="home">
                     <a href="index.php">Home</a>
                 </li>
                 <li id="edu">
-                    <a href="education.html">Education</a>
+                    <a href="education.php">Education</a>
                 </li>
                 <li id="portfol">
-                    <a href="portfol.html">Portfolio</a>
+                    <a href="portfol.php">Portfolio</a>
                 </li>
                 <li id="skill">
-                    <a href="skills.html">Skills</a>
+                    <a href="skills.php">Skills</a>
                 </li>
                 <li>
                     <a href="viewBlog.php">Blog Posts</a>
                 </li>
-
                 <li id="logout">
-                    <a href="login.php">Logout</a>
+                    <a href="logout.php"><?php echo $_SESSION['fullname']; ?></a>
                 </li>
             </ul>
         </nav>
 
         <section>
             <article>
-                <h1>My Portfolio of Work</h1>
-                <p>Below you will find a list of all of my completed works</p>
+                <h1>My Transferable Skills</h1>
+                <h2>Below you will find a list of skill that will be useful in this field of work and many more</h2>
                 <hr>
                 <ul>
-                    <li class="works"><a href="index.html">Showcase Site</a></li>
+                    <li class="skill">
+                        <p>Logical Thinking</p>
+                    </li>
+                    <li class="skill">
+                        <p>Time managment</p>
+                    </li>
+                    <li class="skill">
+                        <p>Problem Solving</p>
+                    </li>
+                    <li class="skill">
+                        <p>Computer Literate</p>
+                    </li>
+
 
                 </ul>
             </article>
         </section>
+
+
 
         <footer>
 

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,32 +24,29 @@
 <body>
 
     <div id="main">
-        <nav>
-            <ul class="navlist">
-                <li id="name">
-                    <a href="index.php">My Education</a>
-                </li>
-                <li id="home">
-                    <a href="index.php">Home</a>
-                </li>
-                <li id="edu">
-                    <a href="education.html">Education</a>
-                </li>
-                <li id="portfol">
-                    <a href="portfol.html">Portfolio</a>
-                </li>
-                <li id="skill">
-                    <a href="skills.html">Skills</a>
-                </li>
-                <li>
-                    <a href="viewBlog.php">Blog Posts</a>
-                </li>
-
-                <li id="logout">
-                    <a href="login.php">Logout</a>
-                </li>
-            </ul>
-        </nav>
+        <ul class="navlist">
+            <li id="name">
+                <a href="viewBlog.php">My Education</a>
+            </li>
+            <li id="home">
+                <a href="education.php">Home</a>
+            </li>
+            <li id="edu">
+                <a href="education.php">Education</a>
+            </li>
+            <li id="portfol">
+                <a href="portfol.php">Portfolio</a>
+            </li>
+            <li id="skill">
+                <a href="skills.php">Skills</a>
+            </li>
+            <li>
+                <a href="viewBlog.php">Blog Posts</a>
+            </li>
+            <li id="logout">
+                <a href="logout.php"><?php echo $_SESSION['fullname']; ?></a>
+            </li>
+        </ul>
 
         <section>
             <article id="eduhistory">
