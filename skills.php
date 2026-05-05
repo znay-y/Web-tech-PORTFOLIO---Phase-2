@@ -84,16 +84,19 @@ session_start();
                         <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="education.html">Education</a>
+                        <a href="education.php">Education</a>
                     </li>
                     <li>
-                        <a href="portfol.html">Portfolio</a>
+                        <a href="portfol.php">Portfolio</a>
                     </li>
                     <li>
-                        <a href="skills.html">Skills</a>
+                        <a href="skills.php">Skills</a>
                     </li>
                     <li>
-                        <a href="login.php">Logout</a>
+                        <a href="viewBlog.php">Blog Posts</a>
+                    </li>
+                    <li>
+                        <a href="logout.php">Logout</a>
                     </li>
                 </ul>
             </nav>
