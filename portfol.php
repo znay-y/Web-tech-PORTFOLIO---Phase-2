@@ -55,7 +55,7 @@ session_start();
                 <p>Below you will find a list of all of my completed works</p>
                 <hr>
                 <ul>
-                    <li class="works"><a href="index.html">Showcase Site</a></li>
+                    <li class="works"><a href="index.php">Showcase Site</a></li>
 
                 </ul>
             </article>

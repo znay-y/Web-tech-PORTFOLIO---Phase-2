@@ -29,7 +29,7 @@ session_start();
                 <a href="viewBlog.php">My Education</a>
             </li>
             <li id="home">
-                <a href="education.php">Home</a>
+                <a href="index.php">Home</a>
             </li>
             <li id="edu">
                 <a href="education.php">Education</a>
