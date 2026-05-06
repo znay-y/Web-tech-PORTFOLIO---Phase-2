@@ -66,6 +66,12 @@ session_start();
                 $sql = "SELECT * FROM posts";
                 $result = $conn->query($sql);
 
+                if (isset($_POST['month'])) {
+                    $monthFilter = $_POST['month'];
+                } else {
+                    $monthFilter = '';
+                }
+
                 $posts = [];
 
 
@@ -86,10 +92,24 @@ session_start();
                         }
                     }
                 }
+                echo "<div class='filter'>";
+                echo "<h4>Filter Posts by month: </h4>";
+                echo "<form method='POST'>";
+                echo "<input type='month' name='month'>";
+                echo "<input type='submit' value='Filter'>";
+                echo "</form>";
+                echo "</div>";
 
                 foreach ($posts as $post) {
+
+                    $postMonth = substr($post['created_at'], 0, 7);
+
+                    if ($monthFilter && $postMonth !== $monthFilter) {
+                        continue;
+                    }
+
                     echo "<div class='blog'>";
-                    echo "<h6>" . $post['created_at'] . "</h6>";
+                    echo "<h6>" . date("jS F Y, H:i \\U\\T\\C", strtotime($post['created_at'])) . "</h6>";
                     echo "<h2>" . $post['title'] . "</h2>";
                     echo "<hr>";
                     echo "<p>" . $post['body'] . "</p>";
