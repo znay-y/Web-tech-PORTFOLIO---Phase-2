@@ -1,7 +1,10 @@
 <?php
+session_start();
+
+
 $servername = "127.0.0.1";
 $username = "root";
-$password = ""; // "" for XAMPP, "root" for MAMP
+$password = "";
 $dbname = "ecs417";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -10,10 +13,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-
-$title = $_POST['Title'];
-$body = $_POST['body'];
-
+$title = $_SESSION['new_post_title'];
+$body = $_SESSION['new_post_body'];
 
 $sql = "INSERT INTO posts (title, body)
 VALUES ('$title', '$body')";
@@ -25,6 +26,7 @@ if ($conn->query($sql) === TRUE) {
 }
 $conn->close();
 
-header("Location: viewBlog.php");
-?>
+unset($_SESSION['new_post_title']);
+unset($_SESSION['new_post_body']);
 
+header("Location: viewBlog.php");

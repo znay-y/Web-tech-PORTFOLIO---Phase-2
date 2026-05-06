@@ -53,8 +53,8 @@ session_start();
             <aside>
                 <?php
 
-                $title = $_POST['Title'];
-                $body = $_POST['body'];
+                $title = $_SESSION['new_post_title'];
+                $body = $_SESSION['new_post_body'];
 
 
                 $servername = "127.0.0.1";
@@ -92,7 +92,13 @@ session_start();
                     }
                 }
 
-                
+                //New Post
+                echo "<div class='blog'>";
+                echo "<h2>" . $_SESSION['new_post_title'] . "</h2>";
+                echo "<hr>";
+                echo "<p>" . $_SESSION['new_post_body'] . "</p>";
+                echo "<hr>";
+                echo "</div>";
 
 
 
@@ -110,8 +116,9 @@ session_start();
                 $conn->close();
 
                 ?>
-                <a href
-                <a href="addEntry.php"><button>Confirm Changes</button></a>
+                <a href="addEntry.php"><button>Continue Editing</button></a>
+                <a href="addPost.php"><button>Confirm Changes</button></a>
+
             </aside>
 
         </section>
