@@ -54,15 +54,29 @@ session_start();
         </nav>
 
         <section>
-            <form method="post" action="addPost.php">
+            <form method="post" action="blogredirect.php">
                 <h1>New Blog Post</h1>
-                <input type="text" placeholder="Title" name="Title" class="textin" id="toptext" required>
+                <input type="text" placeholder="Title" name="Title" class="textin" id="toptext" value="<?php
+
+                                                                                                        if (isset($_SESSION['new_post_title'])) {
+                                                                                                            echo ($_SESSION['new_post_title']);
+                                                                                                        }
 
 
-                <textarea placeholder="Enter text here" name="body" class="textin" id="bottomtext" required></textarea>
+
+                                                                                                        ?>" required>
+
+
+                <textarea placeholder="Enter text here" name="body" class="textin" id="bottomtext" required><?php
+if (isset($_SESSION['new_post_body'])) {
+    echo ($_SESSION['new_post_body']);
+}
+
+?></textarea>
 
                 <section>
-                    <input type="submit" class="button" value="Post" id="submitButton">
+                    <input type="submit" class="button" name="posting" value="Post" id="submitButton">
+                    <input type="submit" class="button" name="preview" value="Preview Post" id="previewButton">
                     <input type="reset" class="button" value="Clear" id="clearButton">
                 </section>
             </form>
